@@ -2,6 +2,7 @@
   "name": "@una-ecom/storefront-plugin-sdk",
   "version": "1.0.0",
   "description": "An SDK to create store connections for the Una E-Commerce management tool",
+  "url": "https://github.com/Una-Ecom/plugin-sdk.git",
   "scripts": {
     "build": "tsc",
     "lint": "eslint src",
@@ -11,6 +12,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage"
+  },
+  "release": {
+    "branches": [
+      "master",
+      "next"
+    ]
   },
   "keywords": [
     "e-commerce",
@@ -29,6 +36,7 @@
     "@types/node": "^22.13.9",
     "eslint": "^9.21.0",
     "husky": "^9.1.7",
+    "semantic-release": "^24.2.3",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.0",
     "vitest": "^3.0.7"
