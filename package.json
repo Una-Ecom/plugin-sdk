@@ -7,7 +7,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && tsc && cp package.json dist/",
+    "postinstall": "npm run build",
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "postbuild": "cp package.json dist/package.json && cp README.md dist/README.md && cp LICENSE dist/LICENSE",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prepublishOnly": "npm run build",
@@ -15,8 +18,7 @@
     "prepare": "husky",
     "test": "vitest run",
     "test:watch": "vitest",
-    "coverage": "vitest run --coverage",
-    "postinstall": "npm run build"
+    "coverage": "vitest run --coverage"
   },
   "publishConfig": {
     "access": "public"
