@@ -9,6 +9,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prepublishOnly": "npm run build",
+    "publish": "semantic-release",
     "prepare": "husky",
     "test": "vitest run",
     "test:watch": "vitest",
