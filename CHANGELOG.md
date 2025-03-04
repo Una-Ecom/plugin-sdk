@@ -1,3 +1,14 @@
+## [1.1.2](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.1...v1.1.2) (2025-03-04)
+
+
+### Bug Fixes
+
+* attempt to fix error ([e965c8c](https://github.com/Una-Ecom/plugin-sdk/commit/e965c8c7bfc4050942234627de8c41f5567b6435))
+* remove cd ([0423d58](https://github.com/Una-Ecom/plugin-sdk/commit/0423d580ad73efff5c587060687a92e3ef73b15a))
+* turn off incremental ([54e7ce5](https://github.com/Una-Ecom/plugin-sdk/commit/54e7ce50a3794aaede1428825420a951cd605b61))
+* update command ([b219c83](https://github.com/Una-Ecom/plugin-sdk/commit/b219c83e342a0e20cc8a57f38f81b7223f2b52b6))
+* update release script ([f996eeb](https://github.com/Una-Ecom/plugin-sdk/commit/f996eebefb6b4a24400f8163287a74a7eb920a60))
+
 ## [1.1.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.0...v1.1.1) (2025-03-04)
 
 
