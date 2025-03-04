@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.3...v1.2.0) (2025-03-04)
+
+
+### Features
+
+* add context to types ([aa884d9](https://github.com/Una-Ecom/plugin-sdk/commit/aa884d9509722ee974ca1d487e80bb6f4d876721))
+
 ## [1.1.3](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.2...v1.1.3) (2025-03-04)
 
 
