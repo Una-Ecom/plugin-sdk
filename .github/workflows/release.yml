@@ -21,11 +21,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Debug Step
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-        run: echo ${{ secrets.GITHUB_TOKEN }}
-
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
