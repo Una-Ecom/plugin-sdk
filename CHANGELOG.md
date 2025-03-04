@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.0.0...v1.1.0) (2025-03-04)
+
+
+### Features
+
+* update name to reflect systems ([5f99678](https://github.com/Una-Ecom/plugin-sdk/commit/5f99678c87977f2dcac588531d4ece66dd0e30ba))
+
 # 1.0.0 (2025-03-04)
 
 
