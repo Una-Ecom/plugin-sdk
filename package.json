@@ -13,7 +13,8 @@
     "prepare": "husky",
     "test": "vitest run",
     "test:watch": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "postinstall": "npm run build"
   },
   "publishConfig": {
     "access": "public"
@@ -25,7 +26,18 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
+      [
+        "@semantic-release/npm",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md",
+            "LICENSE",
+            "README.md",
+            "dist"
+          ]
+        }
+      ],
       [
         "@semantic-release/github",
         {
@@ -41,6 +53,10 @@
             {
               "path": "LICENSE",
               "label": "License"
+            },
+            {
+              "path": "dist",
+              "label": "SDK"
             }
           ]
         }
@@ -68,7 +84,7 @@
     "sdk",
     "una",
     "una-ecom",
-    "plguin"
+    "plugin"
   ],
   "author": "rhyswfbowles",
   "license": "MIT",
