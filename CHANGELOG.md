@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.0...v1.1.1) (2025-03-04)
+
+
+### Bug Fixes
+
+* add dist to publishing ([05f015d](https://github.com/Una-Ecom/plugin-sdk/commit/05f015d1e852d93fd34ffb030ecf518bb59b2be2))
+
 # [1.1.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.0.0...v1.1.0) (2025-03-04)
 
 
