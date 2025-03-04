@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.2...v1.1.3) (2025-03-04)
+
+
+### Bug Fixes
+
+* update build args ([a9b0171](https://github.com/Una-Ecom/plugin-sdk/commit/a9b0171187ec5d325f003d379fef4518a98f45e0))
+
 ## [1.1.2](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.1...v1.1.2) (2025-03-04)
 
 
