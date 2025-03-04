@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && tsc && cp package.json dist/package.json",
+    "build": "rm -rf dist && tsc && cp package.json dist/",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prepublishOnly": "npm run build",
