@@ -21,10 +21,10 @@ export interface IProductData {
 
 export interface IPluginContext {
     /** Retrieve config for a given plugin instance. */
-    getConfig(pluginInstanceId: string): Promise<Record<string, JsonValue>>;
+    getConfig(pluginInstanceId: string): Promise<JsonValue>;
 
     /** Store or update config for a given plugin instance. */
-    setConfig(pluginInstanceId: string, config: Record<string, JsonValue>): Promise<void>;
+    setConfig(pluginInstanceId: string, config: JsonValue): Promise<void>;
 }
 
 export interface ICreateProductResult {
