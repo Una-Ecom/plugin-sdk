@@ -1,9 +1,9 @@
-import { VendorPlugin } from "./types";
+import { IVendorPlugin } from "./types";
 
-const REGISTERED_PLUGINS: VendorPlugin[] = [];
+const REGISTERED_PLUGINS: IVendorPlugin[] = [];
 
 /** Register a new plugin with the system */
-export function registerPlugin(plugin: VendorPlugin) {
+export function registerPlugin(plugin: IVendorPlugin) {
     if (!plugin.pluginName) {
         throw new Error('PluginName is required');
     }
@@ -16,6 +16,6 @@ export function registerPlugin(plugin: VendorPlugin) {
 }
 
 /** Retrieve a plugin by name */
-export function getPluginByName(name: string): VendorPlugin | undefined {
+export function getPluginByName(name: string): IVendorPlugin | undefined {
     return REGISTERED_PLUGINS.find((p) => p.pluginName.toLowerCase() === name.toLowerCase());
 }

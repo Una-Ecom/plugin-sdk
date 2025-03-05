@@ -1,6 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { getPluginByName, registerPlugin } from '../manager';
-import { VendorPlugin } from '../types';
+import { IVendorPlugin } from '../types';
+
+const mockProduct = {
+    id: 'test',
+    title: 'Test Product',
+    description: 'Test description',
+    price: 10,
+    images: ['test.jpg'],
+}
 
 describe('PluginManager', () => {
     describe('registerPlugin', () => {
@@ -13,8 +21,14 @@ describe('PluginManager', () => {
                 pluginDescription: 'Test plugin',
                 authenticate: () => Promise.resolve({ accessToken: 'test' }),
                 fetchProducts: () => Promise.resolve([]),
-                createProduct: () => Promise.resolve(),
-                updateProduct: () => Promise.resolve(),
+                createProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
+                updateProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
             };
 
             registerPlugin(plugin);
@@ -30,8 +44,14 @@ describe('PluginManager', () => {
                 pluginDescription: 'Test plugin',
                 authenticate: () => Promise.resolve({ accessToken: 'test' }),
                 fetchProducts: () => Promise.resolve([]),
-                createProduct: () => Promise.resolve(),
-                updateProduct: () => Promise.resolve(),
+                createProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
+                updateProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
             };
 
             registerPlugin(plugin);
@@ -46,11 +66,17 @@ describe('PluginManager', () => {
                 pluginDescription: 'Test plugin',
                 authenticate: () => Promise.resolve({ accessToken: 'test' }),
                 fetchProducts: () => Promise.resolve([]),
-                createProduct: () => Promise.resolve(),
-                updateProduct: () => Promise.resolve(),
+                createProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
+                updateProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
             };
 
-            expect(() => registerPlugin(plugin as unknown as VendorPlugin)).toThrowError();
+            expect(() => registerPlugin(plugin as unknown as IVendorPlugin)).toThrowError();
         });
     });
 
@@ -63,8 +89,14 @@ describe('PluginManager', () => {
                 pluginDescription: 'Test plugin',
                 authenticate: () => Promise.resolve({ accessToken: 'test' }),
                 fetchProducts: () => Promise.resolve([]),
-                createProduct: () => Promise.resolve(),
-                updateProduct: () => Promise.resolve(),
+                createProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
+                updateProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
             };
 
             registerPlugin(plugin);
@@ -79,8 +111,14 @@ describe('PluginManager', () => {
                 pluginDescription: 'Test plugin',
                 authenticate: () => Promise.resolve({ accessToken: 'test' }),
                 fetchProducts: () => Promise.resolve([]),
-                createProduct: () => Promise.resolve(),
-                updateProduct: () => Promise.resolve(),
+                createProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
+                updateProduct: () => Promise.resolve({
+                    productData: mockProduct,
+                    success: true,
+                }),
             };
 
             registerPlugin(plugin);

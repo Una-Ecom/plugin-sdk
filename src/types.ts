@@ -1,17 +1,17 @@
+import { JsonValue } from "@prisma/client/runtime/library";
 
-
-export interface AuthOptions {
+export interface IAuthOptions {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
 }
 
 /** Data returned from an authentication flow (tokens, config) */
-export interface AuthResult {
+export interface IAuthResult {
     accessToken?: string;
     refreshToken?: string;
 }
 
-export interface ProductData {
+export interface IProductData {
     id?: string;
     title: string;
     description?: string;
@@ -19,17 +19,29 @@ export interface ProductData {
     images?: string[];
 }
 
-export interface PluginContext {
+export interface IPluginContext {
     /** Retrieve config for a given plugin instance. */
-    getConfig(pluginInstanceId: string): Promise<Record<string, any>>;
+    getConfig(pluginInstanceId: string): Promise<Record<string, JsonValue>>;
 
     /** Store or update config for a given plugin instance. */
-    setConfig(pluginInstanceId: string, config: Record<string, any>): Promise<void>;
+    setConfig(pluginInstanceId: string, config: Record<string, JsonValue>): Promise<void>;
+}
+
+export interface ICreateProductResult {
+    productData: IProductData;
+    success: boolean;
+    error?: string;
+}
+
+export interface IUpdateProductResult {
+    productData: IProductData;
+    success: boolean;
+    error?: string;
 }
 
 
 /** The core plugin interface that all vendor plugins must implement */
-export interface VendorPlugin {
+export interface IVendorPlugin {
     pluginName: string;
     pluginVersion: string;
     pluginAuthor: string;
@@ -38,22 +50,22 @@ export interface VendorPlugin {
     authenticate: (
         tenantId: string,
         pluginInstanceId: string,
-        authOptions: AuthOptions,
-        context: PluginContext
-    ) => Promise<AuthResult>;
+        authOptions: IAuthOptions,
+        context: IPluginContext
+    ) => Promise<IAuthResult>;
 
-    fetchProducts?: (tenantId: string, pluginInstanceId: string, context: PluginContext) => Promise<ProductData[]>;
+    fetchProducts?: (tenantId: string, pluginInstanceId: string, context: IPluginContext) => Promise<IProductData[]>;
     createProduct?: (
         tenantId: string,
         pluginInstanceId: string,
-        productData: ProductData,
-        context: PluginContext
-    ) => Promise<any>;
+        productData: IProductData,
+        context: IPluginContext
+    ) => Promise<ICreateProductResult>;
     updateProduct?: (
         tenantId: string,
         pluginInstanceId: string,
         vendorProductId: string,
-        productData: ProductData,
-        context: PluginContext
-    ) => Promise<any>;
+        productData: IProductData,
+        context: IPluginContext
+    ) => Promise<IUpdateProductResult>;
 }
