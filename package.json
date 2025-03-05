@@ -1,6 +1,6 @@
 {
   "name": "@una-ecom/plugin-sdk",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "An SDK to create store connections for the Una E-Commerce management tool",
   "url": "https://github.com/Una-Ecom/plugin-sdk",
   "repository": "https://github.com/Una-Ecom/plugin-sdk.git",

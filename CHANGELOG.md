@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.3.0...v1.3.1) (2025-03-05)
+
+
+### Bug Fixes
+
+* fix borked type ([2b30617](https://github.com/Una-Ecom/plugin-sdk/commit/2b306177fb562e5562eb772dd399fbfdf6068e4f))
+
 # [1.3.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.2.0...v1.3.0) (2025-03-05)
 
 
