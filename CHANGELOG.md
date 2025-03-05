@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.2.0...v1.3.0) (2025-03-05)
+
+
+### Features
+
+* type changes ([cabeaf9](https://github.com/Una-Ecom/plugin-sdk/commit/cabeaf955b28d149ee23c8fc678ebf82b206534a))
+
 # [1.2.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.1.3...v1.2.0) (2025-03-04)
 
 
