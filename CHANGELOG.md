@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.3.1...v1.4.0) (2025-03-29)
+
+
+### Features
+
+* add more typing ([272953f](https://github.com/Una-Ecom/plugin-sdk/commit/272953fef12aac4005a35c97eb6fc510693fa848))
+
 ## [1.3.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.3.0...v1.3.1) (2025-03-05)
 
 
