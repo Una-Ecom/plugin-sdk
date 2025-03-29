@@ -11,15 +11,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-          
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
-          cache: 'npm'
+          node-version: "22.x"
+          cache: "npm"
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Build
+        run: npm run build
 
       - name: Run Semantic Release and publish
         env:
