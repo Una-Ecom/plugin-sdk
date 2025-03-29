@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.3...v1.5.0) (2025-03-29)
+
+
+### Features
+
+* add key to configs ([08d6c61](https://github.com/Una-Ecom/plugin-sdk/commit/08d6c61f67525c9eb663751dd22f5964106cf073))
+
 ## [1.4.3](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.2...v1.4.3) (2025-03-29)
 
 
