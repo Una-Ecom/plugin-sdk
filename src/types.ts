@@ -1,48 +1,62 @@
 import { JsonValue } from "@prisma/client/runtime/library";
-
 export interface IAuthOptions {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 /** Data returned from an authentication flow (tokens, config) */
 export interface IAuthResult {
+    success: boolean;
+    message?: string;
     accessToken?: string;
     refreshToken?: string;
 }
 
-export interface IProductData {
+export interface ICreateProductData {
     id?: string;
     title: string;
     description?: string;
     price: number;
+    sku?: string;
+}
+
+export interface IProductData {
+    id?: string;
+    variants?: IProductVariant[];
+}
+
+export interface IProductVariant {
+    id?: string;
+    title: string;
+    price: number;
+    sku?: string;
     images?: string[];
 }
 
 export interface IPluginContext {
     /** Retrieve config for a given plugin instance. */
     getConfig(pluginInstanceId: string): Promise<JsonValue>;
-
     /** Store or update config for a given plugin instance. */
     setConfig(pluginInstanceId: string, config: JsonValue): Promise<void>;
 }
 
 export interface ICreateProductResult {
-    productData: IProductData;
     success: boolean;
+    message?: string;
+    productData: IProductData;
     error?: string;
 }
 
 export interface IUpdateProductResult {
-    productData: IProductData;
     success: boolean;
+    message?: string;
+    productData: ICreateProductData;
     error?: string;
 }
 
-export enum FieldTypes {
+export declare enum FieldTypes {
     TEXT = "text",
     NUMBER = "number",
-    BOOLEAN = "boolean",
+    BOOLEAN = "boolean"
 }
 
 export interface IPluginConfigField {
@@ -63,26 +77,8 @@ export interface IVendorPlugin {
     brandColor?: string;
     logo?: string;
     configFields: IPluginConfigField[];
-
-    authenticate: (
-        tenantId: string,
-        pluginInstanceId: string,
-        authOptions: IAuthOptions,
-        context: IPluginContext
-    ) => Promise<IAuthResult>;
-
+    authenticate: (tenantId: string, pluginInstanceId: string, authOptions: IAuthOptions, context: IPluginContext) => Promise<IAuthResult>;
     fetchProducts?: (tenantId: string, pluginInstanceId: string, context: IPluginContext) => Promise<IProductData[]>;
-    createProduct?: (
-        tenantId: string,
-        pluginInstanceId: string,
-        productData: IProductData,
-        context: IPluginContext
-    ) => Promise<ICreateProductResult>;
-    updateProduct?: (
-        tenantId: string,
-        pluginInstanceId: string,
-        vendorProductId: string,
-        productData: IProductData,
-        context: IPluginContext
-    ) => Promise<IUpdateProductResult>;
+    createProduct?: (tenantId: string, pluginInstanceId: string, productData: ICreateProductData, context: IPluginContext) => Promise<ICreateProductResult>;
+    updateProduct?: (tenantId: string, pluginInstanceId: string, vendorProductId: string, productData: ICreateProductData, context: IPluginContext) => Promise<IUpdateProductResult>;
 }
