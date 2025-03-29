@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/Una-Ecom/plugin-sdk/compare/v1.5.1...v1.5.2) (2025-03-29)
+
+
+### Bug Fixes
+
+* type overhaul ([cb878b3](https://github.com/Una-Ecom/plugin-sdk/commit/cb878b3b2fa64ee173b6bf70ce3ffa18aeab3618))
+
 ## [1.5.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.5.0...v1.5.1) (2025-03-29)
 
 
