@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.0...v1.4.1) (2025-03-29)
+
+
+### Bug Fixes
+
+* add build to steps ([8e878e3](https://github.com/Una-Ecom/plugin-sdk/commit/8e878e3f5b07f5ad227c5eb2e83ebce8bc8f1bfb))
+
 # [1.4.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.3.1...v1.4.0) (2025-03-29)
 
 
