@@ -1,9 +1,9 @@
-import { IVendorPlugin } from "./types";
+import { Plugin } from "./types";
 
-const REGISTERED_PLUGINS: IVendorPlugin[] = [];
+const REGISTERED_PLUGINS: Plugin.IVendorPlugin[] = [];
 
 /** Register a new plugin with the system */
-export function registerPlugin(plugin: IVendorPlugin) {
+export function registerPlugin(plugin: Plugin.IVendorPlugin) {
     if (!plugin.pluginName) {
         throw new Error('PluginName is required');
     }
@@ -16,6 +16,6 @@ export function registerPlugin(plugin: IVendorPlugin) {
 }
 
 /** Retrieve a plugin by name */
-export function getPluginByName(name: string): IVendorPlugin | undefined {
+export function getPluginByName(name: string): Plugin.IVendorPlugin | undefined {
     return REGISTERED_PLUGINS.find((p) => p.pluginName.toLowerCase() === name.toLowerCase());
 }
