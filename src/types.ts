@@ -46,6 +46,7 @@ export enum FieldTypes {
 }
 
 export interface IPluginConfigField {
+    key: string;
     label: string;
     type: FieldTypes;
     required: boolean;
