@@ -39,13 +39,28 @@ export interface IUpdateProductResult {
     error?: string;
 }
 
+export enum FieldTypes {
+    TEXT = "text",
+    NUMBER = "number",
+    BOOLEAN = "boolean",
+}
+
+export interface IPluginConfigField {
+    label: string;
+    type: FieldTypes;
+    required: boolean;
+    placeholder: string;
+}
 
 /** The core plugin interface that all vendor plugins must implement */
 export interface IVendorPlugin {
+    id: string;
     pluginName: string;
     pluginVersion: string;
     pluginAuthor: string;
     pluginDescription: string;
+    brandColor: string;
+    configFields: IPluginConfigField[];
 
     authenticate: (
         tenantId: string,
