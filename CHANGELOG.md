@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.2...v1.4.3) (2025-03-29)
+
+
+### Bug Fixes
+
+* added more types ([f26f900](https://github.com/Una-Ecom/plugin-sdk/commit/f26f900aa33687fa709a712a5f464dc76b30effb))
+
 ## [1.4.2](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.1...v1.4.2) (2025-03-29)
 
 
