@@ -59,7 +59,8 @@ export interface IVendorPlugin {
     pluginVersion: string;
     pluginAuthor: string;
     pluginDescription: string;
-    brandColor: string;
+    brandColor?: string;
+    logo?: string;
     configFields: IPluginConfigField[];
 
     authenticate: (
