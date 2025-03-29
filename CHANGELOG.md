@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.1...v1.4.2) (2025-03-29)
+
+
+### Bug Fixes
+
+* remove postinstall step ([9d939c2](https://github.com/Una-Ecom/plugin-sdk/commit/9d939c2808860f76128d5f561708c2a84d634ff8))
+
 ## [1.4.1](https://github.com/Una-Ecom/plugin-sdk/compare/v1.4.0...v1.4.1) (2025-03-29)
 
 
