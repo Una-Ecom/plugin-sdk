@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.5.2...v1.6.0) (2025-03-30)
+
+
+### Features
+
+* add new function ([fa4135b](https://github.com/Una-Ecom/plugin-sdk/commit/fa4135bc788176005dc2f45c58ea2a69772e7820))
+
 ## [1.5.2](https://github.com/Una-Ecom/plugin-sdk/compare/v1.5.1...v1.5.2) (2025-03-29)
 
 
