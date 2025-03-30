@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.6.0...v1.7.0) (2025-03-30)
+
+
+### Features
+
+* add getRegisteredPlugins func ([3e73fe3](https://github.com/Una-Ecom/plugin-sdk/commit/3e73fe3a759ce2fd195ec39a21fea810ee637eb7))
+
 # [1.6.0](https://github.com/Una-Ecom/plugin-sdk/compare/v1.5.2...v1.6.0) (2025-03-30)
 
 
