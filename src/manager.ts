@@ -19,3 +19,8 @@ export function registerPlugin(plugin: Plugin.IVendorPlugin) {
 export function getPluginByName(name: string): Plugin.IVendorPlugin | undefined {
     return REGISTERED_PLUGINS.find((p) => p.pluginName.toLowerCase() === name.toLowerCase());
 }
+
+/* Retrieve a plugin by ID */
+export function getPluginByID(id: string): Plugin.IVendorPlugin | undefined {
+    return REGISTERED_PLUGINS.find((p) => p.id.toLowerCase() === id.toLowerCase());
+}
