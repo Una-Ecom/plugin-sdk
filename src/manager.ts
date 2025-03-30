@@ -15,6 +15,10 @@ export function registerPlugin(plugin: Plugin.IVendorPlugin) {
     REGISTERED_PLUGINS.push(plugin);
 }
 
+export function getRegisteredPlugins(): Plugin.IVendorPlugin[] {
+    return REGISTERED_PLUGINS;
+}
+
 /** Retrieve a plugin by name */
 export function getPluginByName(name: string): Plugin.IVendorPlugin | undefined {
     return REGISTERED_PLUGINS.find((p) => p.pluginName.toLowerCase() === name.toLowerCase());
